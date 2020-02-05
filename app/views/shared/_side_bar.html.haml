@@ -2,10 +2,10 @@
   .user-name
     .user-name--top-items
       .user-name--top-items__name
-      masa
+      = current_user.name
       .user-name--top-items__icons
         .user-name--top-items__icons__write
-        = link_to "/" , class: "user-name--top-items__icons__write" do  
+        = link_to edit_user_path(current_user) , class: "user-name--top-items__icons__write" do  
           = icon('fas', 'edit')
     
         .user-name--top-items__icons__set
