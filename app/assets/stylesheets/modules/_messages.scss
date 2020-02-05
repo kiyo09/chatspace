@@ -47,29 +47,30 @@
     }
    }
   }
-    .group-list{
+    .side-bar__group{
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding-left: 20px;
-      &__link{
-        text-decoration: none;
-        color: white;
-      }
-        &__name{
-          font-size: 15px;
-          line-height: 15px;
+      &-list{
           padding-top: 20px;
-          margin: 0px 20px 5px 20px;
-        }
-        &__message{
-          font-size: 11px;
-          line-height: 11px;
-          margin-bottom: 40px;
+          text-decoration: none;
+          color: white;
           
-        }
-    }
-}    
-  
+          &-list__name{
+            font-size: 15px;
+            line-height: 15px;
+            
+            margin: 0px 20px 5px 20px;
+            }
+          &-list__message{
+            font-size: 11px;
+            line-height: 11px;
+            margin-bottom: 40px;
+              
+            }
+          }
+      }
+  }    
 
 .chat-main {
   display: flex;

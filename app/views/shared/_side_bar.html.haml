@@ -13,11 +13,11 @@
             = icon('fas', 'cog')
   
  
-  .side-bar__group-list
+  .side-bar__group
     - current_user.groups.each do |group|
-      .group-list
-        = link_to '#' , class: "group-list__link" do
-          .group-list__name
+      .side-bar__group-list
+        = link_to '#' , class: "side-bar__group-list" do
+          .side-bar__group-list__name
             = group.name
-          .group-list__message
+          .side-bar__group-list__message
             メッセージはまだありません。
