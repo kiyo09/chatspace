@@ -25,7 +25,7 @@
       margin-left: 0px;
       position: relative;
         &__name{
-        position: absolute;
+          
 
         }
         &__icons{ 
@@ -51,18 +51,22 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding-left: 20px;
-      &__name{
-        font-size: 15px;
-        line-height: 15px;
-        padding-top: 20px;
-        margin: 0px 20px 5px 20px;
+      &__link{
+        text-decoration: none;
+        color: white;
       }
-      &__message{
-        font-size: 11px;
-        line-height: 11px;
-        margin-bottom: 40px;
-        
-      }
+        &__name{
+          font-size: 15px;
+          line-height: 15px;
+          padding-top: 20px;
+          margin: 0px 20px 5px 20px;
+        }
+        &__message{
+          font-size: 11px;
+          line-height: 11px;
+          margin-bottom: 40px;
+          
+        }
     }
 }    
   
