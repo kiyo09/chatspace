@@ -14,31 +14,13 @@
       .message-list__name__date
         2019/11/20(Wed) 17:43:01
     .message-list__comment
-      おはよう！
-    .message-list__name
-      masa
-      .message-list__name__date
-        2019/11/20(Wed) 17:43:01
-    .message-list__comment
-      おはよう！
-    .message-list__name
-      masa
-      .message-list__name__date
-        2019/11/20(Wed) 17:43:01
-    .message-list__comment
-      おはよう！
-    .message-list__name
-      masa
-      .message-list__name__date
-        2019/11/20(Wed) 17:43:01
-    .message-list__comment
-      おはよう！
+      おはよ
 
   .form
-  %form.new_message
+    = form_for [@group, @message] do |f|
     .message-form
-      %input{type: "text", class: "message-form__text", placeholder: "type a message"}
-      %label{class: "message-form__image"}
-        = icon('fas', 'image')
-        %input{type: "file", class: "message-form__image__file"}
-    %input{type: "submit", class: "message-form__send"}
+      = f.text_field :content, class: 'message-form__text', placeholder: 'type a message'
+      = f.label :image, class: 'message-form__text__image' do
+        = icon('fas', 'image', class: 'message-form__text__image')
+          = f.file_field :image, class: 'message-form__image__file'
+      = f.submit 'Send', class: 'message-form__send'
