@@ -1,0 +1,26 @@
+.chat-main
+  .group-info
+    .group-info__brock
+      .group-info__brock__name
+        = @group.name
+      .group-info__brock__member
+        - @group.users.each do |user|
+          .group-info__brock__member__style
+            = user.name
+    .group-info__edit
+    = link_to "Edit", edit_group_path(@group) , class: "group-info__edit__link"
+
+  .message-list
+    = render @messages
+
+  .form
+    = form_for [@group, @message] do |f|
+      .message-form
+        = f.text_field :content, class: 'message-form__text', placeholder: 'type a message'
+        = f.label :image, class: 'message-form__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'message-form__image__file'
+        = f.submit 'Send', class: 'message-form__send'
+
+
+  
