@@ -9,9 +9,11 @@
             = user.name
     .group-info__edit
     = link_to "Edit", edit_group_path(@group) , class: "group-info__edit__link"
-
-  .message-list
+  
+  .messages
     = render @messages
+    
+    
 
   .form
     = form_for [@group, @message] do |f|
