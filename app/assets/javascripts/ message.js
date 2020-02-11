@@ -37,11 +37,11 @@ $(function(){
       `</div>`
     } else if (message.image) {
       var html = `<div class="message-list" data-message-id=` + message.id + `>` +
-        `<div class="upper-message-list">` +
-          `<div class="upper-message-list__upper__name">` +
+        `<div class="message-list__upper">` +
+          `<div class="message-list__upper__name">` +
             message.user_name +
           `</div>` +
-          `<div class="upper-message-list__upper__date">` +
+          `<div class="message-list__upper__date">` +
             message.created_at +
           `</div>` +
         `</div>` +
