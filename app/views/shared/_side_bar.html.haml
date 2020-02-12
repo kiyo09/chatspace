@@ -9,7 +9,7 @@
             = icon('fas', 'edit')
     
         .user-name--top-items__icons__set
-          = link_to edit_user_registration_path , class: "user-name--top-items__icons__set" do
+          = link_to edit_user_path(current_user) , class: "user-name--top-items__icons__set" do
             = icon('fas', 'cog')
   
  
